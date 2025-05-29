@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop</title>
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link href="https://unpkg.com/98.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <main id="desktop">
+        <!-- Example window -->
+        <div class="window" data-window-id="window1">
+            <div class="title-bar">
+                <div class="title-bar-text">Window 1</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>This is window 1!</p>
+            </div>
+        </div>
+
+        <div class="window" data-window-id="window2" style="top: 150px; left: 100px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Window 2</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>This is window 2!</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="taskbar">
+        <button class="start-button">Start</button>
+        <div class="start-menu hidden" id="startMenu">
+            <div class="start-menu-content">
+                <div class="start-menu-content">
+                    <p><strong>Programs</strong></p>
+                    <ul>
+                        <li><button id="openNotepadBtn">📝 Notepad</button></li>
+                        <!-- Add more app buttons later -->
+                        <li><button id="openCalcBtn">🧮 Calculator</button></li>
+                        <li><button id="openPaintBtn">🎨 Paint</button></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="taskbar-windows" id="taskbarApps"></div>
+        <div class="taskbar-clock" id="clock">12:00</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
